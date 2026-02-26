@@ -52,6 +52,7 @@ Every great project starts with a plan. Before writing a single line of code, I 
 ├── imagenes/           # Visual Assets
 │   ├── *.jpg/*.png     # Game cards and UI icons
 │   └── *.mp3/*.wav     # Sound effects and music
+├── .gitignore          # Excluded files
 ├── index.html          # Main Entry Point
 ├── Juego.pdf           # Initial design sketches
 └── README.md           # Project documentation
