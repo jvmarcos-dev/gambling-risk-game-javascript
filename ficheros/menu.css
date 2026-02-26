@@ -1,0 +1,162 @@
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Neon';
+    src: url('../ficheros/webfonts/Neon\ Shine.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	display: flex;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url('../imagenes/fondo.webp') no-repeat center center fixed;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	box-sizing: border-box;
+	min-height: 100vh;
+	font-family: calibri;
+}
+
+.general 
+{
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 8px;
+
+	/* horizontalidad */
+	align-items: center;
+
+	/* verticalidad */
+	justify-content: center;
+
+	padding: 20px;
+}
+
+.oculto
+{
+	display:none !important;
+}
+
+#menuinicial
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+#textomenu
+{
+	color: white;
+	text-align: center;
+	font-size: 25px;
+}
+
+#textograndemenu
+{
+	text-align: center;
+	color: #ff8c00;
+	font-family: Neon;
+	font-size: 120px;
+	font-weight: bold;
+	/*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow*/
+    text-shadow:  0 0 5px #fff,  0 0 10px #fff,  0 0 20px #ff8c00, 0 0 40px #ff8c00,  0 0 80px #ff8c00;
+    animation: neon 2s infinite alternate;
+}
+
+@keyframes neon {
+    0%, 100% { opacity: 1; }
+    80% { opacity: 0.9; }
+    90% { opacity: 1; }
+    95% { opacity: 0.8; }
+}
+
+.boton
+{
+	border: solid 2px rgba(255, 140, 0, 0.5);
+	letter-spacing: 2px;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 450px;
+	height: 50px;
+	color: white;
+	font-weight: bold;
+	font-family: calibri;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.boton:hover
+{
+	border: 2px solid #ff8c00;
+	box-shadow: 0 0 15px #ff8c00, 0 0 5px #ff8c00;
+	/*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform*/
+	transform: scale(1.05);
+}
+
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+@media (min-width: 1440px) {
+	
+#textograndemenu
+{
+	font-size: 150px;
+}
+
+.boton
+{
+	width: 550px;
+}
+
+}
+
+
+
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1080px) {
+#textograndemenu
+{
+	font-size: 160px;
+}
+
+.boton
+{
+	width: 550px;
+	font-size: 20px;
+}
+
+body
+{
+	background-attachment: scroll;
+}
+}
+
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media (max-width: 750px) {
+#textograndemenu
+{
+	font-size: 100px;
+}
+
+.boton
+{
+	width: 340px;
+}
+}

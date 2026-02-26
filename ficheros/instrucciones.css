@@ -1,0 +1,149 @@
+.instrucciones
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.fila-instruccion
+{
+	display: flex;
+	align-items: center;
+	border: solid 2px red;
+	padding:0px 7px;
+	margin-bottom: 15px;
+	border: solid 2px rgba(255, 140, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.808);
+}
+
+.lasinstrucciones
+{
+	display: flex;
+	letter-spacing: 2px;
+	width: 450px;
+	color: white;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: 14px;
+}
+
+.imageninstrucciones
+{
+	width: 40px;
+}
+
+.icono
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 140, 0, 0.705);
+	border: solid 2px #ff8c00;
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+	box-shadow: 0 0 15px rgba(255, 140, 0, 0.705);
+
+	border-radius: 50%;
+	color: black;
+	justify-content: center;
+}
+
+#cartasinstrucciones
+{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.lascartasinstrucciones
+{
+    width: 140px;
+}
+
+.fila-carta
+{
+	display: flex;
+	padding:0px 7px;
+	border: solid 2px rgba(255, 140, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.808);
+	margin-top: 10px;
+}
+
+.textocarta
+{
+	display: flex;
+	letter-spacing: 2px;
+	width: 120px;
+	height: 100px;
+	color: white;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: 14px;
+}
+
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+@media (min-width: 1440px) {
+	
+.lasinstrucciones
+{
+	width: 550px;
+	font-size: 17px;
+}
+
+}
+
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1080px) {
+.lasinstrucciones
+{
+	width: 450px;
+	font-size: 13px;
+}
+}
+
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media (max-width: 750px) {
+.lasinstrucciones
+{
+	width: 250px;
+	font-size: 12px;
+}
+
+#cartasinstrucciones
+{
+	flex-direction: column;
+	align-items: center;
+}
+
+.textocarta
+{
+	width: 350px;
+	height: 42px;
+}
+
+.fila-carta
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 340px;
+}
+
+.carta
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+}

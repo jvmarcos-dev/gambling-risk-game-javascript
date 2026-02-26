@@ -1,0 +1,286 @@
+.info {
+    font-size: 30px;
+    color: orange;
+}
+
+
+#ocultarjuego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#numero_ronda {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ff8c00;
+    font-family: Neon;
+    font-size: 50px;
+    font-weight: bold;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow*/
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff8c00, 0 0 40px #ff8c00, 0 0 80px #ff8c00;
+    animation: neon 2s infinite alternate;
+}
+
+#cartas {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.lascartas {
+    width: 115px;
+    cursor: pointer;
+}
+
+#botonplantarse {
+    border: solid 2px rgba(255, 0, 0, 0.5);
+    letter-spacing: 2px;
+    background-color: rgba(102, 24, 24, 0.596);
+    width: 480px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-family: calibri;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.hover:hover {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 15px #ff0000, 0 0 5px #ff0000;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform*/
+    transform: scale(1.05);
+}
+
+.botonplantarsehover:hover {
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px #ffffff, 0 0 5px #ffffff;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform*/
+    transform: scale(1.05);
+}
+
+#textoronda,
+#textoapuesta,
+#textototal {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: Neon;
+    font-size: 30px;
+    font-weight: bold;
+    animation: neon 2s infinite alternate;
+}
+
+#textoronda {
+    color: #00ccff;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow*/
+    text-shadow: 0 0 10px #fff, 0 0 20px #00ccff, 0 0 40px #00ccff, 0 0 80px #00ccff;
+}
+
+#textoapuesta {
+    color: #c8ff00;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow*/
+    text-shadow: 0 0 10px #fff, 0 0 20px #c8ff00, 0 0 40px #c8ff00, 0 0 80px #c8ff00;
+}
+
+#textototal {
+    color: #ffffff;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow*/
+    text-shadow: 0 0 10px #fff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+}
+
+#totales {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.lostotales {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    width: 300px;
+}
+
+#totalronda {
+    border: solid 2px #00ccff;
+}
+
+#totalapuesta {
+    border: solid 2px #c8ff00;
+}
+
+#total {
+    border: solid 2px #ffffff;
+}
+
+#esta_ronda,
+#cant_total,
+#cant_apuesta {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-family: calibri;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.candado {
+    margin-left: auto;
+    font-size: 15px;
+    color: yellow;
+}
+
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+@media (min-width: 1440px) {
+
+    .candado {
+        font-size: 20px;
+    }
+
+    .lascartas {
+        width: 150px;
+    }
+
+    #numero_ronda {
+        font-size: 70px;
+    }
+
+    .lostotales {
+        width: 400px;
+    }
+
+    #esta_ronda,
+    #cant_total,
+    #cant_apuesta {
+        font-size: 50px;
+    }
+
+    #textoronda,
+    #textoapuesta,
+    #textototal {
+        font-size: 40px;
+    }
+
+    #botonplantarse {
+        width: 590px;
+        font-size: 20px;
+    }
+
+}
+
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1080px) {
+    .lascartas {
+        width: 120px;
+    }
+
+    #numero_ronda {
+        font-size: 50px;
+    }
+
+    #totales {
+        gap: 20px;
+    }
+
+    .lostotales {
+        width: 200px;
+    }
+
+    #esta_ronda,
+    #cant_total,
+    #cant_apuesta {
+        font-size: 40px;
+    }
+
+    #textoronda,
+    #textoapuesta,
+    #textototal {
+        font-size: 30px;
+    }
+
+    #botonplantarse {
+        width: 390px;
+        font-size: 20px;
+    }
+}
+
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media (max-width: 750px) {
+    .lascartas {
+        width: 130px;
+        flex: 0 0 auto;
+    }
+
+    #numero_ronda {
+        font-size: 60px;
+    }
+
+    #totales {
+        gap: 20px;
+    }
+
+    .lostotales {
+        width: 130px;
+    }
+
+    #esta_ronda,
+    #cant_total,
+    #cant_apuesta {
+        font-size: 50px;
+    }
+
+    #textoronda,
+    #textoapuesta,
+    #textototal {
+        font-size: 40px;
+    }
+
+    #totales {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .lostotales {
+        width: 290px;
+    }
+
+    #botonplantarse {
+        width: 290px;
+        font-size: 20px;
+    }
+
+    #cartas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .candado {
+        margin-left: 0;
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: yellow;
+    }
+}

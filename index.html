@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Cache-Control" content="no-store">
+
+	<meta name="description" content="Todo o nada">
+	<meta name="author" content="Juan Valentín Marcos Argandoña">
+
+	<link rel="shortcut icon" href="imagenes/icon.webp" />
+
+	<title>Todo o nada</title>
+
+	<!-- estilo general de la página -->
+	<link href="ficheros/menu.css" rel="stylesheet">
+
+	<!-- estilo general de la página -->
+	<link href="ficheros/instrucciones.css" rel="stylesheet">
+
+	<!-- estilo general de la página -->
+	<link href="ficheros/apuesta.css" rel="stylesheet">
+
+	<!-- estilo general de la página -->
+	<link href="ficheros/juego.css" rel="stylesheet">
+
+	<!-- biblioteca de iconos -->
+	<link href="ficheros/all.css" type="text/css" rel="stylesheet">
+
+	<script src="ficheros/script.js" defer></script>
+
+</head>
+
+<body>
+
+	<div class="general">
+		<div id="menuinicial" class="lapantalla">
+			<label id="textograndemenu">TODO O <br> NADA</label>
+			<button onclick="botones(1)" onmouseenter="sonidopasarporencima()" class="boton">JUGAR</button>
+			<button onclick="botones(2)" onmouseenter="sonidopasarporencima()" class="boton">INSTRUCCIONES</button>
+		</div>
+
+		<div id="ocultarinstrucciones" class="oculto lapantalla">
+			<div class="instrucciones">
+
+				<div class="fila-instruccion">
+					<div class="icono">
+						<img class="imageninstrucciones" src="imagenes/dinero.png">
+					</div>
+					<p class="lasinstrucciones">
+						Selecciona la cantidad de dinero que quieres arriesgar antes de cada mano.
+						A mayor apuesta, mayor será el premio, pero también el riesgo de quedarte a cero.
+					</p>
+				</div>
+
+				<div class="fila-instruccion">
+					<div class="icono">
+						<img class="imageninstrucciones" src="imagenes/bomba.webp">
+					</div>
+					<p class="lasinstrucciones">
+						Pulsa para revelar las cartas en el tablero. Tu misión es acumular puntos o
+						combinaciones ganadoras, pero ten cuidado: entre las cartas se esconde la bomba que termina la
+						ronda al instante.
+					</p>
+				</div>
+
+				<div class="fila-instruccion">
+					<div class="icono">
+						<img class="imageninstrucciones" src="imagenes/carta.webp">
+					</div>
+					<p class="lasinstrucciones">
+						Después de cada carta, tú decides: Plantarte para asegurar las
+						ganancias actuales o continuar para intentar multiplicarlas. Si sale una ruina antes de
+						plantarte, pierdes todo lo de esa ronda.
+					</p>
+				</div>
+
+				<div class="fila-instruccion">
+					<div class="icono">
+						<img class="imageninstrucciones" src="imagenes/cerebro.webp">
+					</div>
+					<p class="lasinstrucciones">
+						Tienes un límite de 5 rondas para alcanzar el objetivo de 10000$. Gestiona tu banca con cabeza;
+						si te quedas sin dinero antes de tiempo, la partida termina.
+					</p>
+				</div>
+
+				<div id="cartasinstrucciones">
+
+					<div class="carta">
+						<img class="lascartasinstrucciones" src="imagenes/premios.jpg">
+
+						<div class="fila-carta">
+							<p class="textocarta">
+								PREMIOS: Suman su valor al marcador ESTA RONDA. <br> +25%, +50%, +75%, x2, x3.
+							</p>
+						</div>
+					</div>
+
+					<div class="carta">
+						<img class="lascartasinstrucciones" src="imagenes/8.jpg">
+
+						<div class="fila-carta">
+							<p class="textocarta">
+								Resetea el marcador ESTA RONDA a 0. <br> La ronda continúa.
+							</p>
+						</div>
+					</div>
+
+					<div class="carta">
+						<img class="lascartasinstrucciones" src="imagenes/1.jpg">
+
+						<div class="fila-carta">
+							<p class="textocarta">
+								Pierdes tu apuesta y el botín acumulado. Termina la ronda.
+							</p>
+						</div>
+					</div>
+
+					<div class="carta">
+						<img class="lascartasinstrucciones" src="imagenes/6.jpg">
+
+						<div class="fila-carta">
+							<p class="textocarta">
+								Protege el marcador ESTA RONDA contra la próxima bomba.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<button class="boton" onclick="botones(3)" onmouseenter="sonidopasarporencima()">VOLVER</button>
+			</div>
+		</div>
+
+		<div id="ocultarapuesta" class="oculto lapantalla">
+			<div class="notificacion-error oculto" id="error">
+				<div class="icono-error">
+					<img class="imagen-error" src="imagenes/error.webp">
+				</div>
+				<p class="elerror">
+					Error, la cantidad que quieres apostar no es valida
+				</p>
+			</div>
+
+			<label id="textosaldo">SALDO ACTUAL</label>
+			<div id="saldo_actual">
+				<i class="fas fa-dollar-sign dolarsaldo"></i>
+				<input id="saldo" type="number" value="" disabled>
+				<i class="fas fa-dollar-sign dolarsaldo"></i>
+			</div>
+
+			<div id="apuesta_actual">
+				<i class="fas fa-dollar-sign dolarapuesta"></i>
+				<input type="number" id="apuesta" name="apuesta" value="" placeholder=" APUESTA" maxlength="3" required
+					autocomplete="off" min="1" max="999">
+				<i class="fas fa-dollar-sign dolarapuesta"></i>
+			</div>
+
+			<div id="botonesapuesta">
+				<button id="botonvolver" class="hover" onclick="botones(3)"
+					onmouseenter="sonidopasarporencima()">VOLVER</button>
+				<button id="botonjugar" onclick="botones(4)" onmouseenter="sonidopasarporencima()">CONTINUAR</button>
+			</div>
+		</div>
+
+		<div id="ocultarjuego" class="oculto lapantalla">
+			<i id="elcandado" class="fas fa-lock candado oculto"></i>
+			<div class="notificacion-error oculto" id="lanotificacion">
+				<div class="icono-error">
+					<i class="fas fa-info info"></i>
+				</div>
+				<p class="elerror" id="noti">
+				</p>
+			</div>
+			<label id="numero_ronda">RONDA 1/5</label>
+			<div id="cartas">
+				<img id="c1" class="lascartas" src="imagenes/0.jpg">
+				<img id="c2" class="lascartas" src="imagenes/0.jpg">
+				<img id="c3" class="lascartas" src="imagenes/0.jpg">
+				<img id="c4" class="lascartas" src="imagenes/0.jpg">
+			</div>
+			<button id="botonplantarse" class="hover" onclick="botones(5)"
+				onmouseenter="sonidopasarporencima()">PLANTARSE</button>
+			<div id="textos">
+			</div>
+			<div id="totales">
+				<div class="lostotales" id="totalronda">
+					<label id="textoronda">RONDA</label>
+					<input type="text" id="esta_ronda" name="esta_ronda" value="0" disabled>
+				</div>
+
+				<div class="lostotales" id="totalapuesta">
+					<label id="textoapuesta">APUESTA</label>
+					<input type="text" id="cant_apuesta" name="cant_apuesta" value="0" disabled>
+				</div>
+
+				<div class="lostotales" id="total">
+					<label id="textototal">TOTAL</label>
+					<input type="text" id="cant_total" name="cant_total" value="0" disabled>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+	<audio id="pulsarcarta" src="imagenes/sonido.mp3" preload="auto"></audio>
+	<audio id="pasarporboton" src="imagenes/pasarporboton.wav" preload="auto"></audio>
+	<audio id="pulsarboton" src="imagenes/pulsarboton.wav" preload="auto"></audio>
+	<audio id="ambiente" src="imagenes/musicafondo.mp3" preload="auto" loop></audio>
+	<audio id="sonidonoti" src="imagenes/notificacion.mp3" preload="auto"></audio>
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+#apuesta_actual
+{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 750px;
+    height: 120px;
+    font-weight: bold;
+	font-family: calibri;
+	font-size: 80px;
+    padding: 10px;
+}
+
+#saldo_actual
+{
+    display: flex;
+    border: solid 2px #00ff00;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 600px;
+    height: 100px;
+    font-weight: bold;
+	font-family: calibri;
+	font-size: 50px;
+    padding: 10px;
+}
+
+#apuesta_actual
+{
+    border: solid 2px rgba(255, 140, 0, 0.5);
+}
+
+#saldo, #apuesta
+{
+    text-align: center;
+	background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 100%;
+    height: 100%;
+	color: white;
+    font-weight: bold;
+	font-family: calibri;
+	font-size: 80px;
+	padding: 0px 15px;
+}
+
+.dolarsaldo
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+}
+
+.dolarapuesta
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+}
+
+#ocultarapuesta
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 0;
+}
+
+#apuesta_actual:focus-within
+{
+    outline: none;
+    border: 2px solid #ff8c00;
+	box-shadow: 0 0 15px #ff8c00, 0 0 5px #ff8c00;
+	/*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform*/
+	transform: scale(1.05);
+}
+
+#apuesta:focus
+{
+    border: none;
+    outline: none;
+}
+
+#textosaldo
+{
+    text-align: center;
+	color: #00ff00;
+	font-family: Neon;
+	font-size: 70px;
+	font-weight: bold;
+    /*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow*/
+    text-shadow:  0 0 10px #fff,  0 0 20px #00ff00, 0 0 40px #00ff00,  0 0 80px #00ff00;
+    animation: neon 2s infinite alternate;
+}
+
+#botonesapuesta
+{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+#botonvolver
+{
+	border: solid 2px rgba(255, 0, 0, 0.5);
+	letter-spacing: 2px;
+	background-color: rgba(102, 24, 24, 0.596);
+	width: 320px;
+	height: 50px;
+	color: white;
+	font-weight: bold;
+	font-family: calibri;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+#botonjugar
+{
+    border: solid 2px rgba(255, 255, 255, 0.5);
+	letter-spacing: 2px;
+	background-color: rgb(0, 0, 0);
+	width: 320px;
+	height: 50px;
+	color: white;
+	font-weight: bold;
+	font-family: calibri;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+#botonjugar:hover
+{
+	border: 2px solid #ffffff;
+	box-shadow: 0 0 15px #ffffff, 0 0 5px #ffffff;
+	/*https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform*/
+	transform: scale(1.05);
+}
+
+.notificacion-error
+{
+	position: absolute;
+	z-index: 1000;
+    display: flex;
+	align-items: center;
+	border: solid 2px red;
+	padding:0px 7px;
+	margin-bottom: 15px;
+	border: solid 2px rgba(0, 42, 255, 0.5);
+	background-color: rgb(0, 0, 0);
+}
+
+.elerror
+{
+	display: flex;
+	letter-spacing: 2px;
+	width: 450px;
+	color: white;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: 14px;
+
+}
+
+.imagen-error
+{
+    width: 40px;
+}
+
+.icono-error
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 42, 255, 0.5);
+	border: solid 2px rgb(0, 42, 255);
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+	box-shadow: 0 0 15px rgb(0, 42, 255);
+
+	border-radius: 50%;
+	color: black;
+	justify-content: center;
+}
+
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+/**************************** TAMAÑO MONITOR ************************************/
+@media (min-width: 1440px) {
+	
+#textosaldo
+{
+	font-size: 80px;
+}
+
+.elerror
+{
+	font-size: 17px;
+}
+
+#saldo_actual
+{
+    width: 700px;
+	height: 120px;
+}
+
+#apuesta_actual
+{
+    width: 850px;
+	height: 150px;
+}
+
+#botonvolver
+{
+	width: 350px;
+	font-size: 20px;
+}
+
+#botonjugar
+{
+	width: 350px;
+	font-size: 20px;
+}
+
+#saldo, #apuesta
+{
+	font-size: 100px;
+}
+
+}
+
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1080px) {
+#textosaldo
+{
+	font-size: 60px;
+}
+
+.elerror
+{
+	font-size: 23px;
+}
+
+#saldo_actual
+{
+    width: 450px;
+	height: 110px;
+}
+
+#apuesta_actual
+{
+    width: 650px;
+	height: 150px;
+}
+
+#botonvolver
+{
+	width: 350px;
+	font-size: 20px;
+}
+
+#botonjugar
+{
+	width: 350px;
+	font-size: 20px;
+}
+
+#saldo, #apuesta
+{
+	font-size: 100px;
+}
+}
+
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media (max-width: 750px) {
+#textosaldo
+{
+	font-size: 40px;
+}
+
+.elerror
+{
+	width: 250px;
+	font-size: 12px;
+}
+
+#saldo_actual
+{
+    width: 250px;
+	height: 80px;
+}
+
+#apuesta_actual
+{
+    width: 340px;
+	height: 80px;
+}
+
+#botonvolver
+{
+	width: 320px;
+	font-size: 20px;
+	order: 2;
+}
+
+#botonjugar
+{
+	width: 320px;
+	font-size: 20px;
+	order: 1;
+}
+
+#botonesapuesta
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#saldo, #apuesta
+{
+	font-size: 40px;
+}
+
+.dolarsaldo
+{
+	font-size: 40px;
+}
+
+.dolarapuesta
+{
+	font-size: 40px;
+}
+}
